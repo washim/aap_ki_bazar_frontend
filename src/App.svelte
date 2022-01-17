@@ -16,7 +16,7 @@
     let orderMessage = '';
     
     onMount(async () => {
-		const res = await fetch(`http://localhost:8000/api/products/`);
+		const res = await fetch(`https://ecommerce.nbsols.com/api/products/`);
 		products = await res.json();
 	});
 
@@ -64,7 +64,7 @@
     async function doSubmitOrder() {
         if (cart.length > 0) {
             const customer_data = JSON.stringify(customer);
-            const create_shipping = await fetch('http://localhost:8000/api/shipping/', {
+            const create_shipping = await fetch('https://ecommerce.nbsols.com/api/shipping/', {
                 method: 'POST',
                 headers: {'Authorization': 'Basic YWRtaW46UGFzc3dvcmRANzg2Iw==', 'Content-Type': 'application/json'},
                 body: customer_data
@@ -72,7 +72,7 @@
             const shipping = await create_shipping.json()
             localStorage.setItem("shippingAddress", customer_data);
             if (shipping.id) {
-                const create_invoice = await fetch('http://localhost:8000/api/invoices/', {
+                const create_invoice = await fetch('https://ecommerce.nbsols.com/api/invoices/', {
                     method: 'POST',
                     headers: {'Authorization': 'Basic YWRtaW46UGFzc3dvcmRANzg2Iw==', 'Content-Type': 'application/json'},
                     body: JSON.stringify({"status": "processed", "status_message": "Processed","shipping": shipping.id})
@@ -80,7 +80,7 @@
                 const invoice = await create_invoice.json();
                 if (invoice.id) {
                     for(let product of cart) {
-                        const create_order = await fetch('http://localhost:8000/api/orders/', {
+                        const create_order = await fetch('https://ecommerce.nbsols.com/api/orders/', {
                             method: 'POST',
                             headers: {'Authorization': 'Basic YWRtaW46UGFzc3dvcmRANzg2Iw==', 'Content-Type': 'application/json'},
                             body: JSON.stringify({"quantity": product.quantity, "weight": product.weight, "invoice": invoice.id, "product": product.id})
