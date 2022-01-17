@@ -110,7 +110,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col text-start"><button class="navbar-toggler border-0" type="button" data-bs-toggle="modal" data-bs-target="#menumodal"><span class="navbar-toggler-icon"></span></button></div>
-                        <div class="col text-center"><a href="index.html"><div class="logo w-90">Aap ki Bazar</div></a></div>
+                        <div class="col text-center"><a href="index.html"><div class="logo w-90">App ki Bazar</div></a></div>
                         <div class="col text-end"><a href="index.html" class="nav-icon mt-1 d-inline-block" data-bs-toggle="modal" data-bs-target="#cartmodal"><i class="feather-shopping-bag text-grey-500 font-xl"></i></a></div>
                     </div>
                 </div>
