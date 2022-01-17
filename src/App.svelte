@@ -190,7 +190,7 @@
             <!-- HEADER WRAPPER -->
             <div class="main-wrap pt-4">
                 <div class="container">
-                    <Route path="/">
+                    <Route path="/*">
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="row rounded-6 mb-3 md-mt-6 bg-white">
