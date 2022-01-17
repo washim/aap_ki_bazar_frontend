@@ -126,7 +126,7 @@
                         <div class="col-lg-6 text-end">
                             <ul class="navbar-nav float-end">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Refer to your friends and Earn </a>
+                                    <a class="nav-link" href="#">Terms and Conditions</a>
                                 </li>
                             </ul>
                         </div>
