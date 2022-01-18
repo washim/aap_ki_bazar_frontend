@@ -1,6 +1,7 @@
 <script>
     import { Router, Route, Link } from "svelte-navigator";
     import { onMount } from 'svelte';
+    import Carousel from 'svelte-carousel'
     
     let cart = [];
     let products = [];
@@ -188,81 +189,87 @@
                 </div>
             </div>
             <!-- HEADER WRAPPER -->
-            <div class="banner-wrapper pt-4 pb-3 md-mt-6">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="owl-carousel slider-banner banner-wrap owl-theme ovh nav-none owl-arrow-center arrow-container">
-                                <div class="item rounded-6 bg-image-cover ovh style1 d-flex justify-content-start" style="background-image: url(/images/banner-slider-2.jpg);">
-                                    <div class="slide-content text-left w-50 ps-lg-5">
-                                        <span class="text-grey-700">All natural products</span>
-                                        <h2 class="text-grey-900"><b class="d-block">Special Offer </b>of the week</h2>    
-                                        <p class="text-grey-600">App Ki Bazar food is food produced by methods that comply with the standard of farming.</p>
-                                        <div class="clearfix"></div>
-                                        <a href="#" class="btn-lg rounded-25 btn bg-current">SHOP NOW</a>
+            <Route path="/">
+                <div class="banner-wrapper pt-4 pb-3 md-mt-6">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="banner-wrap">
+                                    <Carousel let:showPrevPage let:showNextPage autoplay autoplayDuration={5000} autoplayProgressVisible pauseOnFocus>
+                                    <div slot="prev" on:click={showPrevPage} class="custom-arrow custom-arrow-prev badge badge-pill badge-primary">
+                                        <i class="feather-chevron-left"></i>
                                     </div>
-                                </div>
-                                <div class="item rounded-6 bg-image-cover ovh style1 d-flex justify-content-center" style="background-image: url(/images/banner-slider-5.jpg);">
-                                    <div class="slide-content text-center w-50">
-                                        <span class="text-grey-700">All natural products</span>
-                                        <h2 class="text-grey-900"><b>Healty Food Pure</b> App Ki Bazar</h2>    
-                                        <p class="text-grey-600">App Ki Bazar food is food produced by methods that comply with the standard of farming.</p>
-                                        <div class="clearfix"></div>
-                                        <a href="#" class="btn-lg rounded-25 btn bg-current">SHOP NOW</a>
+                                    <div class="item bg-image-cover ovh style1 d-flex justify-content-start" style="background-image: url(/images/banner-slider-2.jpg);">
+                                        <div class="slide-content text-left w-50 ps-lg-5">
+                                            <span class="text-grey-700">All natural products</span>
+                                            <h2 class="text-grey-900"><b class="d-block">Special Offer </b>of the week</h2>    
+                                            <p class="text-grey-600">App Ki Bazar food is food produced by methods that comply with the standard of farming.</p>
+                                            <div class="clearfix"></div>
+                                            <a href="#" class="btn-lg rounded-25 btn bg-current">SHOP NOW</a>
+                                        </div>
                                     </div>
-                                </div>
-                                
-                                <div class="item rounded-6 bg-image-cover ovh style1 d-flex justify-content-center" style="background-image: url(/images/banner-slider-1.jpg);">
-                                    <div class="slide-content text-center w-50">
-                                        <span class="text-grey-700">All natural products</span>
-                                        <h2 class="text-grey-900"><b class="d-block">Summer Discount</b> App Ki Bazar Home Delivery</h2>    
-                                        <p class="text-grey-600">App Ki Bazar food is food produced by methods that comply with the standard of farming.</p>
-                                        <div class="clearfix"></div>
-                                        <a href="#" class="btn-lg rounded-25 btn bg-current">SHOP NOW</a>
+                                    <div class="item bg-image-cover ovh style1 d-flex justify-content-center" style="background-image: url(/images/banner-slider-5.jpg);">
+                                        <div class="slide-content text-center w-50">
+                                            <span class="text-grey-700">All natural products</span>
+                                            <h2 class="text-grey-900"><b>Healty Food Pure</b> App Ki Bazar</h2>    
+                                            <p class="text-grey-600">App Ki Bazar food is food produced by methods that comply with the standard of farming.</p>
+                                            <div class="clearfix"></div>
+                                            <a href="#" class="btn-lg rounded-25 btn bg-current">SHOP NOW</a>
+                                        </div>
                                     </div>
+                                    <div class="item bg-image-cover ovh style1 d-flex justify-content-center" style="background-image: url(/images/banner-slider-1.jpg);">
+                                        <div class="slide-content text-center w-50">
+                                            <span class="text-grey-700">All natural products</span>
+                                            <h2 class="text-grey-900"><b class="d-block">Summer Discount</b> App Ki Bazar Home Delivery</h2>    
+                                            <p class="text-grey-600">App Ki Bazar food is food produced by methods that comply with the standard of farming.</p>
+                                            <div class="clearfix"></div>
+                                            <a href="#" class="btn-lg rounded-25 btn bg-current">SHOP NOW</a>
+                                        </div>
+                                    </div>
+                                    <div slot="next" on:click={showNextPage} class="custom-arrow custom-arrow-next badge badge-pill badge-primary">
+                                        <i class="feather-chevron-right"></i>
+                                    </div>
+                                    </Carousel>
                                 </div>
-                                
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- CATEGORY WRAPPER -->
-            <div class="content-wrap">
-                <div class="container">
-                    <div class="row m-0">
-                        <div class="col-lg-12 bg-white rounded-6 p-4 pb-3">
-                            <div class="row">
-                                <div class="col-lg-3 col-md-6 xs-mb-4 md-mb-3 text-start">
-                                    <i class="ti-shopping-cart text-grey-900 display1-size float-start me-3"></i>
-                                    <h4 class="mt-0 fw-600 text-grey-900 font-xsss mb-0 ls-0">100% Secure Payments</h4>
-                                    <p class="font-xsssss fw-500 text-grey-500 lh-26 mt-0 mb-0">100% Payment Protection.</p>
-                                </div>                 
-                                
-                                <div class="col-lg-3 col-md-6 xs-mb-4 md-mb-3 text-start">
-                                    <i class="ti-headphone-alt text-grey-900 display1-size float-start me-3"></i>
-                                    <h4 class="mt-0 fw-600 text-grey-900 font-xsss mb-0 ls-0">Support</h4>
-                                    <p class="font-xsssss fw-500 text-grey-500 lh-26 mt-0 mb-0">Alway online feedback 24/7</p>
-                                </div>                 
-                                <div class="col-lg-3 col-md-6 md-mb-3 text-start">
-                                    <i class="ti-lock text-grey-900 display1-size float-start me-3"></i>
-                                    <h4 class="mt-0 fw-600 text-grey-900 font-xsss mb-0 ls-0">Trust pay</h4>
-                                    <p class="font-xsssss fw-500 text-grey-500 lh-26 mt-0 mb-0">Easy Return Policy.</p>
-                                </div> 
-                                <div class="col-lg-3 col-md-6 text-start">
-                                    <i class="ti-reload text-grey-900 display1-size float-start me-3"></i>
-                                    <h4 class="mt-0 fw-600 text-grey-900 font-xsss mb-0 ls-0">Return and Refund</h4>
-                                    <p class="font-xsssss fw-500 text-grey-500 lh-26 mt-0 mb-0">100% money back guarantee</p>
-                                </div>   
+                <!-- CATEGORY WRAPPER -->
+                <div class="content-wrap">
+                    <div class="container">
+                        <div class="row m-0">
+                            <div class="col-lg-12 bg-white rounded-6 p-4 pb-3">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-6 xs-mb-4 md-mb-3 text-start">
+                                        <i class="ti-shopping-cart text-grey-900 display1-size float-start me-3"></i>
+                                        <h4 class="mt-0 fw-600 text-grey-900 font-xsss mb-0 ls-0">100% Secure Payments</h4>
+                                        <p class="font-xsssss fw-500 text-grey-500 lh-26 mt-0 mb-0">100% Payment Protection.</p>
+                                    </div>                 
+                                    
+                                    <div class="col-lg-3 col-md-6 xs-mb-4 md-mb-3 text-start">
+                                        <i class="ti-headphone-alt text-grey-900 display1-size float-start me-3"></i>
+                                        <h4 class="mt-0 fw-600 text-grey-900 font-xsss mb-0 ls-0">Support</h4>
+                                        <p class="font-xsssss fw-500 text-grey-500 lh-26 mt-0 mb-0">Alway online feedback 24/7</p>
+                                    </div>                 
+                                    <div class="col-lg-3 col-md-6 md-mb-3 text-start">
+                                        <i class="ti-lock text-grey-900 display1-size float-start me-3"></i>
+                                        <h4 class="mt-0 fw-600 text-grey-900 font-xsss mb-0 ls-0">Trust pay</h4>
+                                        <p class="font-xsssss fw-500 text-grey-500 lh-26 mt-0 mb-0">Easy Return Policy.</p>
+                                    </div> 
+                                    <div class="col-lg-3 col-md-6 text-start">
+                                        <i class="ti-reload text-grey-900 display1-size float-start me-3"></i>
+                                        <h4 class="mt-0 fw-600 text-grey-900 font-xsss mb-0 ls-0">Return and Refund</h4>
+                                        <p class="font-xsssss fw-500 text-grey-500 lh-26 mt-0 mb-0">100% money back guarantee</p>
+                                    </div>   
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- CATEGORY WRAPPER -->
-            <div class="main-wrap pt-4">
-                <div class="container">
-                    <Route path="/*">
+                <!-- CATEGORY WRAPPER -->
+                <div class="main-wrap pt-4">
+                    <div class="container">
                         <div class="row">
                             <div class="col-lg-3 pe-lg-0 d-none d-lg-block">
                                 <div class="card w-100 border-0 shadow-none mb-3 ovh rounded-6 hover-zoom-image">
@@ -309,13 +316,19 @@
                                 </div>
                             </div>
                         </div>
-                    </Route>
-                    <Route path="about">
-                        <h3>About</h3>
-                        <p>That's what it's all about!</p>
-                    </Route>
+                    </div>
                 </div>
-            </div>
+            </Route>
+            <Route path="about">
+                <div class="main-wrap pt-4">
+                    <div class="container">
+                        <div class="row">
+                            <h3>About</h3>
+                            <p>That's what it's all about!</p>
+                        </div>
+                    </div>
+                </div>
+            </Route>
             <!-- FOOTER WRAPPER -->
             <div class="lower-footer bg-white pb-3 pt-3">
                 <div class="container">
