@@ -1,5 +1,5 @@
 <script>
-    import { Router, Route, Link, navigate } from "svelte-navigator";
+    import { Router, Route, Link } from "svelte-navigator";
     import { onMount } from 'svelte';
     
     let cart = [];
@@ -137,7 +137,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12 d-flex">
-                            <a href="#"><div class="logo">Aap ki Bazar</div></a>
+                            <a href="#"><div class="logo">App ki Bazar</div></a>
                             <div class="header-search ms-auto me-2 d-flex">
                                 <a href="#" class="nav-icon" data-bs-toggle="modal" data-bs-target="#cartmodal"><i class="feather-shopping-bag text-grey-500"></i> <span style="color: white; position:relative; top:-5px;">Cart Total: ₹{total}</span></a>
                             </div>
@@ -188,12 +188,99 @@
                 </div>
             </div>
             <!-- HEADER WRAPPER -->
+            <div class="banner-wrapper pt-4 pb-3 md-mt-6">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="owl-carousel slider-banner banner-wrap owl-theme ovh nav-none owl-arrow-center arrow-container">
+                                <div class="item rounded-6 bg-image-cover ovh style1 d-flex justify-content-start" style="background-image: url(/images/banner-slider-2.jpg);">
+                                    <div class="slide-content text-left w-50 ps-lg-5">
+                                        <span class="text-grey-700">All natural products</span>
+                                        <h2 class="text-grey-900"><b class="d-block">Special Offer </b>of the week</h2>    
+                                        <p class="text-grey-600">App Ki Bazar food is food produced by methods that comply with the standard of farming.</p>
+                                        <div class="clearfix"></div>
+                                        <a href="#" class="btn-lg rounded-25 btn bg-current">SHOP NOW</a>
+                                    </div>
+                                </div>
+                                <div class="item rounded-6 bg-image-cover ovh style1 d-flex justify-content-center" style="background-image: url(/images/banner-slider-5.jpg);">
+                                    <div class="slide-content text-center w-50">
+                                        <span class="text-grey-700">All natural products</span>
+                                        <h2 class="text-grey-900"><b>Healty Food Pure</b> App Ki Bazar</h2>    
+                                        <p class="text-grey-600">App Ki Bazar food is food produced by methods that comply with the standard of farming.</p>
+                                        <div class="clearfix"></div>
+                                        <a href="#" class="btn-lg rounded-25 btn bg-current">SHOP NOW</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="item rounded-6 bg-image-cover ovh style1 d-flex justify-content-center" style="background-image: url(/images/banner-slider-1.jpg);">
+                                    <div class="slide-content text-center w-50">
+                                        <span class="text-grey-700">All natural products</span>
+                                        <h2 class="text-grey-900"><b class="d-block">Summer Discount</b> App Ki Bazar Home Delivery</h2>    
+                                        <p class="text-grey-600">App Ki Bazar food is food produced by methods that comply with the standard of farming.</p>
+                                        <div class="clearfix"></div>
+                                        <a href="#" class="btn-lg rounded-25 btn bg-current">SHOP NOW</a>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CATEGORY WRAPPER -->
+            <div class="content-wrap">
+                <div class="container">
+                    <div class="row m-0">
+                        <div class="col-lg-12 bg-white rounded-6 p-4 pb-3">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-6 xs-mb-4 md-mb-3 text-start">
+                                    <i class="ti-shopping-cart text-grey-900 display1-size float-start me-3"></i>
+                                    <h4 class="mt-0 fw-600 text-grey-900 font-xsss mb-0 ls-0">100% Secure Payments</h4>
+                                    <p class="font-xsssss fw-500 text-grey-500 lh-26 mt-0 mb-0">100% Payment Protection.</p>
+                                </div>                 
+                                
+                                <div class="col-lg-3 col-md-6 xs-mb-4 md-mb-3 text-start">
+                                    <i class="ti-headphone-alt text-grey-900 display1-size float-start me-3"></i>
+                                    <h4 class="mt-0 fw-600 text-grey-900 font-xsss mb-0 ls-0">Support</h4>
+                                    <p class="font-xsssss fw-500 text-grey-500 lh-26 mt-0 mb-0">Alway online feedback 24/7</p>
+                                </div>                 
+                                <div class="col-lg-3 col-md-6 md-mb-3 text-start">
+                                    <i class="ti-lock text-grey-900 display1-size float-start me-3"></i>
+                                    <h4 class="mt-0 fw-600 text-grey-900 font-xsss mb-0 ls-0">Trust pay</h4>
+                                    <p class="font-xsssss fw-500 text-grey-500 lh-26 mt-0 mb-0">Easy Return Policy.</p>
+                                </div> 
+                                <div class="col-lg-3 col-md-6 text-start">
+                                    <i class="ti-reload text-grey-900 display1-size float-start me-3"></i>
+                                    <h4 class="mt-0 fw-600 text-grey-900 font-xsss mb-0 ls-0">Return and Refund</h4>
+                                    <p class="font-xsssss fw-500 text-grey-500 lh-26 mt-0 mb-0">100% money back guarantee</p>
+                                </div>   
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CATEGORY WRAPPER -->
             <div class="main-wrap pt-4">
                 <div class="container">
                     <Route path="/*">
                         <div class="row">
-                            <div class="col-lg-12">
-                                <div class="row rounded-6 mb-3 md-mt-6 bg-white">
+                            <div class="col-lg-3 pe-lg-0 d-none d-lg-block">
+                                <div class="card w-100 border-0 shadow-none mb-3 ovh rounded-6 hover-zoom-image">
+                                    <img src="/images/side-banner-4.jpg" alt="" class="w-100">
+                                    <div class="p-4 posa bottom-0 w-100">
+                                        <span class="fw-700 ls-3 text-white bg-current ps-2 pe-2 lh-24 rounded-6 d-inline-block font-xsssss">30% OFF</span>
+                                        <h4 class="font-xs fw-700 lh-28 text-grey-900 mb-3 mt-3 ls-0">High Quality <br> Products</h4>
+                                        <a href="#" class="fw-700 ls-3 text-grey-900 font-xsssss">SHOP NOW</a>
+                                    </div>  
+                                </div>
+                            </div>
+                            <div class="col-lg-9">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <h4 class="fw-700 font-xs mb-3">Deal of the day</h4>
+                                    </div>
+                                </div>
+                                <div class="row rounded-6 m-0 bg-white">
                                     {#each products as product}
                                     <div class="col-lg-3 col-sm-3 col-xs-6 p-3 border-none-xs border-end rounded-0 posr">
                                         <a href="#" class="d-block text-center">
@@ -208,6 +295,18 @@
                                     </div>
                                     {/each}
                                 </div>
+                                <div class="row">
+                                    <div class="col-lg-12 mt-3 mb-3">
+                                        <div class="card border-0 banner-wrap bg-image-cover bg-image-center" style="background-image: url(/images/bg-grocery-2.jpg);">
+                                            <div class="slide-content style4 text-center w-100">
+                                                <span class="text-current">All natural products</span>
+                                                <h2 class="text-grey-900"><b class="d-block">SUMMER DISCOUNT </b>of the week</h2>    
+                                                <div class="clearfix"></div>
+                                                <a href="#" class="btn-lg rounded-25 btn bg-current">SHOP NOW</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </Route>
@@ -221,7 +320,7 @@
             <div class="lower-footer bg-white pb-3 pt-3">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-6 text-center text-sm-start xs-mb-3"><p class="text-grey-500 fw-500 font-xssss mb-0">@ Copyright 2021 All rights reserved.</p></div>
+                        <div class="col-md-6 text-center text-sm-start xs-mb-3"><p class="text-grey-500 fw-500 font-xssss mb-0">@Copyright 2022 All rights reserved.</p></div>
                     </div>
                 </div>
             </div>
@@ -292,68 +391,16 @@
                     <div class="modal-body vw100 text-start p-0 h-100">
                         <div class="card p-4 border-0 text-start h-100 ">
                             <h4 class="fw-700 font-lg text-grey-900 text-start mb-3 d-block ls-0"> Menu</h4>
-                            
                             <ul class="navbar-nav">
                                 <li class="nav-item active dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Home </a>
+                                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
                                     <ul class="dropdown-menu border-0 shadow-xss">
-                                    <li><a class="dropdown-item" href="g-1.html"> Grocery One</a></li>
-                                    <li><a class="dropdown-item" href="g-2.html"> Grocery Two </a></li>
-                                    <li><a class="dropdown-item" href="g-3.html"> Grocery Three </a></li>
-                                    <li><a class="dropdown-item" href="g-4.html"> Grocery Four</a></li>
-                                    <li><a class="dropdown-item" href="g-5.html"> Grocery Five</a></li>
-                                    <li><a class="dropdown-item" href="g-6.html"> Grocery Six </a></li>
+                                        <li><a class="dropdown-item" href="#">Home</a></li>
+                                        <li><a class="dropdown-item" href="#">About</a></li>
+                                        <li><a class="dropdown-item" href="#">Terms and Conditions</a></li>
                                     </ul>
                                 </li>
-                                
-                                <li class="nav-item active dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Shop <span class="bg-danger">New</span></a>
-                                    <ul class="dropdown-menu border-0 shadow-xss">
-                                    <li><a class="dropdown-item" href="shop-list-1.html"> Shop One</a></li>
-                                    <li><a class="dropdown-item" href="shop-list-2.html"> Shop Two </a></li>
-                                    <li><a class="dropdown-item" href="shop-list-3.html"> Shop Three </a></li>
-                                    <li><a class="dropdown-item" href="shop-list-4.html"> Shop Four</a></li>
-                                    <li><a class="dropdown-item" href="shop-list-5.html"> Shop Five </a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item active dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Dashboard</a>
-                                    <ul class="dropdown-menu border-0 shadow-xss">
-                                    <li><a class="dropdown-item" href="dashboard.html"> Dashboard</a></li>
-                                    <li><a class="dropdown-item" href="address.html"> Saved Address </a></li>
-                                    <li><a class="dropdown-item" href="orders.html"> Orders </a></li>
-                                    <li><a class="dropdown-item" href="coupon.html"> Coupon</a></li>
-                                    <li><a class="dropdown-item" href="payment.html"> Payment </a></li>
-                                    <li><a class="dropdown-item" href="notification.html"> Notification </a></li>
-                                    <li><a class="dropdown-item" href="default.html"> Logout </a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item active dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Product</a>
-                                    <ul class="dropdown-menu border-0 shadow-xss">
-                                    <li><a class="dropdown-item" href="single-product-1.html"> Single One</a></li>
-                                    <li><a class="dropdown-item" href="single-product-2.html"> Single Two </a></li>
-                                    <li><a class="dropdown-item" href="single-product-3.html"> Single Three </a></li>
-                                    <li><a class="dropdown-item" href="single-product-4.html"> Single Four</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item active dropdown">
-                                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
-                                            <ul class="dropdown-menu border-0 shadow-xss">
-                                            <li><a class="dropdown-item" href="about.html"> About</a></li>
-                                            <li><a class="dropdown-item" href="contact.html"> Contact </a></li>
-                                            <li><a class="dropdown-item" href="blog.html"> Blog </a></li>
-                                            <li><a class="dropdown-item" href="blog-single.html"> Single Blog</a></li>
-                                            <li><a class="dropdown-item" href="faq.html"> Faq</a></li>
-                                            </ul>
-                                        </li>
                             </ul>
-                            <div class="card h-auto mt-auto p-4 w-100 rounded-10 theme-bg border-0 text-center bg-image-cover" style="background-image: url(https://via.placeholder.com/1071x319.png);">
-                                <div class="card-body text-center p-2 mb-2">
-                                    <h4 class="text-grey-900 white-text mb-3 font-sm fw-500">Become a <b class="text-grey-900 white-text">pro</b> <br> Get more <b class="text-grey-900 white-text">features</b></h4>
-                                    <a href="login-one.html" class="btn rounded-25 bg-current white-text text-white w-150">Upgrade</a>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
