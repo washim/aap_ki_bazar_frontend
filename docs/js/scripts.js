@@ -183,11 +183,11 @@ $(document).ready(function() {
         $('.navigation').removeClass('nav-active');
         return false;
     });
-    $('.nav-link').on('click', function () {
-        $('.nav-link').removeClass('active');
-        $(this).addClass('active');
-        return false;
-    });
+    // $('.nav-link').on('click', function () {
+    //     $('.nav-link').removeClass('active');
+    //     $(this).addClass('active');
+    //     return false;
+    // });
 
     
     $('input[name="color-radio"]').on('change', function () {
