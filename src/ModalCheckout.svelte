@@ -16,7 +16,7 @@
             const customer_data = JSON.stringify(customer);
             const create_shipping = await fetch('https://ecommerce.nbsols.com/api/shipping/', {
                 method: 'POST',
-                headers: {'Authorization': 'Basic YWRtaW46UGFzc3dvcmRANzg2Iw==', 'Content-Type': 'application/json'},
+                headers: {'Authorization': 'Basic YXBwX2tpX2JhemFyOkJhemFyQDc4NiM=', 'Content-Type': 'application/json'},
                 body: customer_data
             });
             const shipping = await create_shipping.json()
@@ -24,7 +24,7 @@
             if (shipping.id) {
                 const create_invoice = await fetch('https://ecommerce.nbsols.com/api/invoices/', {
                     method: 'POST',
-                    headers: {'Authorization': 'Basic YWRtaW46UGFzc3dvcmRANzg2Iw==', 'Content-Type': 'application/json'},
+                    headers: {'Authorization': 'Basic YXBwX2tpX2JhemFyOkJhemFyQDc4NiM=', 'Content-Type': 'application/json'},
                     body: JSON.stringify({"status": "processed", "status_message": "Processed","shipping": shipping.id})
                 });
                 const invoice = await create_invoice.json();
@@ -32,7 +32,7 @@
                     for(let product of $cart) {
                         const create_order = await fetch('https://ecommerce.nbsols.com/api/orders/', {
                             method: 'POST',
-                            headers: {'Authorization': 'Basic YWRtaW46UGFzc3dvcmRANzg2Iw==', 'Content-Type': 'application/json'},
+                            headers: {'Authorization': 'Basic YXBwX2tpX2JhemFyOkJhemFyQDc4NiM=', 'Content-Type': 'application/json'},
                             body: JSON.stringify({"quantity": product.quantity, "weight": product.weight, "invoice": invoice.id, "product": product.id})
                         });
                     }

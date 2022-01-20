@@ -3,7 +3,6 @@
     import { cart } from './js/stores';
 
     let products = [];
-    let itemWeight = {id: 0, weight: ""};
 
     onMount(async () => {
 		const res = await fetch(`https://ecommerce.nbsols.com/api/products/`);
@@ -11,20 +10,14 @@
 	});
 
     const addToCart = (product) => {
-        if (product.id === itemWeight.id) {
-            for(let item of $cart) {
-                if(item.id === product.id) {
-                    product.quantity += 1;
-                    product.weight = itemWeight.weight;
-                    $cart = $cart;
-                    return;
-                }
+        for(let item of $cart) {
+            if(item.id === product.id) {
+                product.quantity += 1;
+                $cart = $cart;
+                return;
             }
-            product.weight = itemWeight.weight;
-            $cart = [...$cart, product]
-        } else {
-            alert('Choose product weight');
         }
+        $cart = [...$cart, product]
     }
 </script>
 
@@ -56,7 +49,7 @@
                         <div class="clearfix"></div>
                         <h2 class="mt-2"><a href="single-product.html" class="text-grey-700 fw-600 font-xsss lh-22 d-block ls-0">{product.name}</a></h2>
                         <h6 class="font-xss ls-3 fw-700 text-current d-flex">
-                            <span class="font-xsssss text-grey-500">₹</span>{product.price} <span class="ms-auto text-grey-500 fw-500 mt-1 font-xsssss"><select on:change={e => itemWeight = {id: product.id, weight: e.target.value}}>{@html product.weight_attributes}</select></span>
+                            <span class="font-xsssss text-grey-500">₹</span>{product.price} <span class="ms-auto text-grey-500 fw-500 mt-1 font-xsssss">{product.weight_attributes}</span>
                         </h6>
                         <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#cartmodal" on:click={() => addToCart(product)}>Add to cart</button>
                     </div>

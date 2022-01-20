@@ -40,7 +40,7 @@
                         <div class="row mb-3">
                             <div class="col-md-5 col-xs-5"><a href="#" class="d-block text-center"><img src="{cartitem.picture}" alt="product-image" class="w-100 d-inline-block pt-3 pb-3 bg-white rounded-6"/></a></div>
                             <div class="col-md-7 col-xs-7 ps-0">
-                                <span class="ms-auto text-grey-500 fw-500 lh-1 font-xsssss mt-0 w-100 mb-2">{cartitem.weight}</span>
+                                <span class="ms-auto text-grey-500 fw-500 lh-1 font-xsssss mt-0 w-100 mb-2">{cartitem.weight_attributes}</span>
                                 <a href="single-product.html" class="text-grey-900 fw-600 font-xssss lh-22 d-block ls-0 mb-2">{cartitem.name}</a>
                                 <h6 class="font-xs ls-3 fw-700 text-current float-start mt-1"><span class="font-xsssss text-grey-500">₹</span>{cartitem.price * cartitem.quantity} </h6>
                                 <div class="cart-count float-end ">
