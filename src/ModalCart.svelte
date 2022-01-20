@@ -38,7 +38,7 @@
                         <h4 class="fw-700 font-lg text-grey-900 text-start mb-3 mt-n2 d-block"> Cart</h4>
                         {#each $cart as cartitem }
                         <div class="row mb-3">
-                            <div class="col-md-5 col-xs-5"><a href="#" class="d-block text-center"><img src="https://ecommerce.nbsols.com/media/{cartitem.picture}" alt="product-image" class="w-100 d-inline-block pt-3 pb-3 bg-white rounded-6"/></a></div>
+                            <div class="col-md-5 col-xs-5"><a href="#" class="d-block text-center"><img src="{cartitem.picture}" alt="product-image" class="w-100 d-inline-block pt-3 pb-3 bg-white rounded-6"/></a></div>
                             <div class="col-md-7 col-xs-7 ps-0">
                                 <span class="ms-auto text-grey-500 fw-500 lh-1 font-xsssss mt-0 w-100 mb-2">{cartitem.weight_attributes}</span>
                                 <a href="single-product.html" class="text-grey-900 fw-600 font-xssss lh-22 d-block ls-0 mb-2">{cartitem.name}</a>

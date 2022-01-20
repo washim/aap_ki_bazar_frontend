@@ -44,7 +44,7 @@
                     {#each products as product}
                     <div class="col-lg-3 col-sm-3 col-xs-6 p-3 border-none-xs border-end rounded-0 posr">
                         <a href="#" class="d-block text-center">
-                            <img src="https://ecommerce.nbsols.com/media/{product.picture}" alt="product-image" class="w-100 mt-3 mb-3 d-inline-block p-2 pt-0" style="width: 171px; height:138px;">
+                            <img src="{product.picture}" alt="product-image" class="w-100 mt-3 mb-3 d-inline-block p-2 pt-0" style="width: 171px; height:138px;">
                         </a>
                         <div class="clearfix"></div>
                         <h2 class="mt-2"><a href="single-product.html" class="text-grey-700 fw-600 font-xsss lh-22 d-block ls-0">{product.name}</a></h2>
