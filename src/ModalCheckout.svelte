@@ -37,6 +37,7 @@
                         });
                     }
                 }
+                $cart = [];
                 orderMessage = 'Your order successfully placed.';
                 orderCompleted = true;
                 setTimeout(() => {orderCompleted = false; orderMessage = '';}, 5000);

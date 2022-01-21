@@ -6,7 +6,7 @@
     "build": "rollup -c",
     "dev": "rollup -c -w",
     "start": "sirv public --single --no-clear",
-    "copy": "cp -rf ./public/* ./docs/"
+    "copy": "rm -rf ./docs && cp -rf ./public ./docs && git checkout docs/CNAME"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.0.0",
