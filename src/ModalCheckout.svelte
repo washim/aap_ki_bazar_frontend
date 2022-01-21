@@ -39,7 +39,6 @@
                 }
                 orderMessage = 'Your order successfully placed.';
                 orderCompleted = true;
-                itemWeight = {id: 0, weight: ""};
                 setTimeout(() => {orderCompleted = false; orderMessage = '';}, 5000);
             }
         } else {
