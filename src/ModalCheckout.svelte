@@ -12,7 +12,7 @@
     let orderMessage = '';
     
     async function doSubmitOrder() {
-        if (cart.length > 0) {
+        if ($cart.length > 0) {
             const customer_data = JSON.stringify(customer);
             const create_shipping = await fetch('https://ecommerce.nbsols.com/api/shipping/', {
                 method: 'POST',
