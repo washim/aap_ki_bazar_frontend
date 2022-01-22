@@ -9,6 +9,31 @@
 		products = await res.json();
 	});
 
+    const plusItem = (product) => {
+        for(let item of $cart) {
+			if(item.id === product.id) {
+				product.quantity += 1
+				$cart = $cart;
+				return;
+			}
+		}
+        $cart = [...$cart, product]
+    }
+
+    const minusItem = (product) => {
+        for(let item of $cart) {
+            if(item.id === product.id) {
+                if(product.quantity > 1 ) {
+                    product.quantity -= 1
+                    $cart = $cart
+                } else {
+                    $cart = $cart.filter((cartItem) => cartItem != product)
+                }
+                return;
+            }
+		}
+    }
+
     const addToCart = (product) => {
         for(let item of $cart) {
             if(item.id === product.id) {
@@ -42,7 +67,7 @@
                 </div>
                 <div class="row rounded-6 m-0 bg-white">
                     {#each products as product}
-                    <div class="col-lg-3 col-sm-3 col-xs-6 p-3 border-none-xs border-end rounded-0 posr">
+                    <div class="col-lg-3 col-sm-3 col-xs-6 p-3 border-none-xs border-end border rounded-0 posr">
                         <a href="#" class="d-block text-center">
                             <img src="{product.picture}" alt="product-image" class="w-100 mt-3 mb-3 d-inline-block p-2 pt-0" style="width: 171px; height:138px;">
                         </a>
@@ -51,7 +76,13 @@
                         <h6 class="font-xss ls-3 fw-700 text-current d-flex">
                             <span class="font-xsssss text-grey-500">₹</span>{product.price} <span class="ms-auto text-grey-500 fw-500 mt-1 font-xsssss">{product.weight_attributes}</span>
                         </h6>
-                        <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#cartmodal" on:click={() => addToCart(product)}>Add to cart</button>
+                        <div class="cart-count d-flex mt-4">
+                            <div class="number">
+                                <span class="minus" data-bs-toggle="modal" data-bs-target="#cartmodal" on:click={() => minusItem(product)}>-</span>
+                                <input type="text" class="open-font" value="1">
+                                <span class="plus" data-bs-toggle="modal" data-bs-target="#cartmodal" on:click={() => plusItem(product)}>+</span>
+                            </div>
+                        </div>
                     </div>
                     {/each}
                 </div>
