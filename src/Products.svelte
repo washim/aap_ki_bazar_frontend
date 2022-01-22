@@ -67,7 +67,7 @@
                 </div>
                 <div class="row rounded-6 m-0 bg-white">
                     {#each products as product}
-                    <div class="col-lg-3 col-sm-3 col-xs-6 p-3 border-none-xs border-end border rounded-0 posr">
+                    <div class="col-lg-3 col-sm-3 col-xs-6 p-3 border rounded-0 posr">
                         <a href="#" class="d-block text-center">
                             <img src="{product.picture}" alt="product-image" class="w-100 mt-3 mb-3 d-inline-block p-2 pt-0" style="width: 171px; height:138px;">
                         </a>
