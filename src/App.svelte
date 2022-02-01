@@ -10,6 +10,7 @@
     import ModalPages from './ModalPages.svelte';
     import ModalCategory from './ModalCategory.svelte';
     import ModalCart from './ModalCart.svelte';
+    import Videos from './videos.svelte';
 </script>
 
 <main>
@@ -20,15 +21,8 @@
             <HomeBanner/>
             <Highlights/>
             <Products/>
-        {:else if $url.hash === '#/about'}
-            <div class="main-wrap pt-4">
-                <div class="container">
-                    <div class="row">
-                        <h3>About</h3>
-                        <p>That's what it's all about!</p>
-                    </div>
-                </div>
-            </div>
+        {:else if $url.hash === '#/videos'}
+            <Videos/>
         {:else}
             <div class="main-wrap pt-4">
                 <div class="container">

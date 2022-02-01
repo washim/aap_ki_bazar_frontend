@@ -8,7 +8,7 @@
     <div class="container">
         <div class="row">
             <div class="col text-start"><button class="navbar-toggler border-0" type="button" data-bs-toggle="modal" data-bs-target="#menumodal"><span class="navbar-toggler-icon"></span></button></div>
-            <div class="col text-center"><a href="index.html"><div class="logo w-90">App ki Bazar</div></a></div>
+            <div class="col text-center"><a href="index.html"><div class="logo w-90"><i class="fas fa-pepper-hot"></i> App ki Bazar</div></a></div>
             <div class="col text-end"><a href="index.html" class="nav-icon mt-1 d-inline-block" data-bs-toggle="modal" data-bs-target="#cartmodal"><i class="feather-shopping-bag text-grey-500 font-xl"></i></a></div>
         </div>
     </div>
@@ -18,13 +18,13 @@
         <div class="row">
             <div class="col-lg-6">
                 <ul class="nav">
-                    <li class="nav-item"><a href="#/about" class="ps-0">About</a></li>
+                    <li class="nav-item"><a href="#/" class="ps-0">Home</a></li>
                 </ul>
             </div>
             <div class="col-lg-6 text-end">
                 <ul class="navbar-nav float-end">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Terms and Conditions</a>
+                        <a class="nav-link" href="#/videos">Our Videos</a>
                     </li>
                 </ul>
             </div>
@@ -35,9 +35,9 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 d-flex">
-                <a href="#"><div class="logo">App ki Bazar</div></a>
+                <a href="#/"><div class="logo"><i class="fas fa-pepper-hot"></i> App ki Bazar</div></a>
                 <div class="header-search ms-auto me-2 d-flex">
-                    <a href="#" class="nav-icon" data-bs-toggle="modal" data-bs-target="#cartmodal"><i class="feather-shopping-bag text-grey-500"></i> <span style="color: white; position:relative; top:-5px;">Cart Total: ₹{total}</span></a>
+                    <a href="#" class="nav-icon" data-bs-toggle="modal" data-bs-target="#cartmodal"><i class="feather-shopping-bag text-grey-500"></i> <span style="color: white; position:relative; top:-5px;">Cart Total: {#if total > 0 && total <= 130}₹{total+10}{:else}₹{total}{/if}</span></a>
                 </div>
             </div>
         </div>

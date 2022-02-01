@@ -95,7 +95,7 @@
                             </div>
                             <div class="col-lg-12">
                                 {orderMessage}
-                                <button type="submit" class="btn w-100 bg-current font-xsss ls-1 fw-600 text-white rounded-10 d-block text-center" disabled={orderCompleted}>Confirm Order</button>
+                                <button type="submit" class="btn w-100 bg-current font-xsss ls-1 fw-600 text-white rounded-10 d-block text-center" disabled={orderCompleted}>Confirm Cash On Delivery</button>
                             </div>
                         </div>
                     </form>

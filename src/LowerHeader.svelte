@@ -25,10 +25,7 @@
                                 <a href="#/" class="nav-link">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a href="#/about" class="nav-link">About Us</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Terms and Conditions</a>
+                                <a class="nav-link" href="#/videos">Our Videos</a>
                             </li>
                         </ul>
                         <ul class="navbar-nav ms-auto">

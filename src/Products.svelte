@@ -12,7 +12,7 @@
     const plusItem = (product) => {
         for(let item of $cart) {
 			if(item.id === product.id) {
-				product.quantity += 1
+				product.quantity += 0.25
 				$cart = $cart;
 				return;
 			}
@@ -23,8 +23,8 @@
     const minusItem = (product) => {
         for(let item of $cart) {
             if(item.id === product.id) {
-                if(product.quantity > 1 ) {
-                    product.quantity -= 1
+                if(product.quantity > 0.25 ) {
+                    product.quantity -= 0.25
                     $cart = $cart
                 } else {
                     $cart = $cart.filter((cartItem) => cartItem != product)
@@ -79,7 +79,7 @@
                         <div class="cart-count d-flex mt-4">
                             <div class="number">
                                 <span class="minus" data-bs-toggle="modal" data-bs-target="#cartmodal" on:click={() => minusItem(product)}>-</span>
-                                <input type="text" class="open-font" value="1">
+                                <input type="text" class="open-font" value="1" disabled>
                                 <span class="plus" data-bs-toggle="modal" data-bs-target="#cartmodal" on:click={() => plusItem(product)}>+</span>
                             </div>
                         </div>
