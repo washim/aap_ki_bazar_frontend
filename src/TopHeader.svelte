@@ -8,7 +8,7 @@
     <div class="container">
         <div class="row">
             <div class="col text-start"><button class="navbar-toggler border-0" type="button" data-bs-toggle="modal" data-bs-target="#menumodal"><span class="navbar-toggler-icon"></span></button></div>
-            <div class="col text-center"><a href="#/"><div class="logo w-90"><i class="fas fa-pepper-hot"></i> App ki Bazar</div></a></div>
+            <div class="col text-center"><a href="#/"><div class="logo w-90"><i class="fas fa-pepper-hot" style="color: brown;"></i> App ki Bazar</div></a></div>
             <div class="col text-end"><a href="#/" class="nav-icon mt-1 d-inline-block" data-bs-toggle="modal" data-bs-target="#cartmodal"><i class="feather-shopping-bag text-grey-500 font-xl"></i> <span style="color: black; position:relative; top:-5px;">{#if total > 0 && total <= 130}₹{total+10}{:else}₹{total}{/if}</span></a></div>
         </div>
     </div>

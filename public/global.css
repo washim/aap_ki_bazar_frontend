@@ -4,9 +4,10 @@
 .custom-arrow{position: absolute !important; z-index: 1; top: 45%; cursor: pointer;}
 .custom-arrow-next{right: 0 !important; margin-right: 5px;}
 .custom-arrow-prev{margin-left: 5px;}
+.rounded-circle{border: 1px solid black;}
 .video-responsive{
     overflow:hidden;
-    padding-bottom:56.25%;
+    padding-bottom:62.5%;
     position:relative;
     height:0;
 }

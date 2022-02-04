@@ -11,6 +11,12 @@
                     <div slot="prev" on:click={showPrevPage} class="custom-arrow custom-arrow-prev badge badge-pill badge-primary">
                         <i class="feather-chevron-left"></i>
                     </div>
+                    <div class="item">
+                        <div class="video-responsive"><iframe src="https://www.youtube.com/embed/JGZolkleYiA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe></div>
+                    </div>
+                    <div class="item">
+                        <div class="video-responsive"><iframe src="https://www.youtube.com/embed/H3WPMf4iqrs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe></div>
+                    </div>
                     <div class="item bg-image-cover ovh style1 d-flex justify-content-start" style="background-image: url(/images/banner-slider-2.jpg);">
                         <div class="slide-content text-left w-50 ps-lg-5">
                             <span class="text-grey-700">All natural products</span>
