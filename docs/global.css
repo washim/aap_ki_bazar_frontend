@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
 .logo{font-family: 'Paytone One', sans-serif; color: white; font-size: 35px; width: auto !important; position: absolute; top:10px;}
-.w-90{color: black; top: 5px; font-size: 25px;}
+.w-90{color: black; top: 5px; font-size: 25px; margin-left: -30px;}
 .custom-arrow{position: absolute !important; z-index: 1; top: 45%; cursor: pointer;}
 .custom-arrow-next{right: 0 !important; margin-right: 5px;}
 .custom-arrow-prev{margin-left: 5px;}

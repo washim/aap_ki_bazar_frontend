@@ -9,9 +9,8 @@
                         <li class="nav-item active dropdown">
                             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
                             <ul class="dropdown-menu border-0 shadow-xss">
-                                <li><a class="dropdown-item" href="#">Home</a></li>
-                                <li><a class="dropdown-item" href="#">About</a></li>
-                                <li><a class="dropdown-item" href="#">Terms and Conditions</a></li>
+                                <li><a class="dropdown-item" href="#/">Home</a></li>
+                                <li><a class="dropdown-item" href="#/videos">Our Videos</a></li>
                             </ul>
                         </li>
                     </ul>
