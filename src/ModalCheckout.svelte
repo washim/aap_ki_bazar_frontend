@@ -28,7 +28,7 @@
                 const create_invoice = await fetch('https://ecommerce.nbsols.com/api/invoices/', {
                     method: 'POST',
                     headers: {'Authorization': 'Basic YXBwX2tpX2JhemFyOkJhemFyQDc4NiM=', 'Content-Type': 'application/json'},
-                    body: JSON.stringify({"status": "processed", "status_message": "Processed","shipping": shipping.id})
+                    body: JSON.stringify({"status": "processed", "status_message": "Processed", "type": customer.weekly_day === "" ? "normal" : "weekly", "weekly_day": customer.weekly_day, "dbc": customer.dbc, "created": customer.created, "shipping": shipping.id})
                 });
                 const invoice = await create_invoice.json();
                 if (invoice.id) {
