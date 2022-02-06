@@ -6,7 +6,10 @@
         'mobile': '',
         'address': '',
         'ward_no': '',
-        'pincode': ''
+        'pincode': '',
+        'weekly_day': '',
+        'dbc': '',
+        'created': '',
     };
     let orderCompleted = false;
     let orderMessage = '';
@@ -57,43 +60,43 @@
                     <h4 class="fw-700 font-lg text-grey-900 text-start mb-3 mt-n2 d-block">Shipping Address</h4>
                     <form on:submit|preventDefault={doSubmitOrder}>
                         <div class="row">
-                            <div class="col-lg-12 mb-1">
+                            <div class="col-lg-12 col-12 mb-1">
                                 <div class="form-group">
                                     <label class="mont-font fw-600 font-xssss mb-2 white-text">Name</label>
                                     <input type="text" class="form-control theme-black-bg rounded-10" bind:value={customer.name} required>
                                 </div>        
                             </div>
-                            <div class="col-lg-12 mb-1">
+                            <div class="col-lg-12 col-12 mb-1">
                                 <div class="form-group">
                                     <label class="mont-font fw-600 font-xssss mb-2 white-text">Mobile</label>
                                     <input type="text" class="form-control theme-black-bg rounded-10" bind:value={customer.mobile} required>
                                 </div>
                             </div>
-                            <div class="col-lg-12 mb-1">
+                            <div class="col-lg-12 col-12 mb-1">
                                 <div class="form-group">
                                     <label class="mont-font fw-600 font-xssss mb-2 white-text">Address</label>
                                     <input type="text" class="form-control theme-black-bg rounded-10" bind:value={customer.address} required>
                                 </div>        
                             </div>
-                            <div class="col-lg-6 mb-1">
+                            <div class="col-lg-6 col-6 mb-1">
                                 <div class="form-group">
                                     <label class="mont-font fw-600 font-xssss mb-2 white-text">Ward No</label>
                                     <input type="text" class="form-control theme-black-bg rounded-10" bind:value={customer.ward_no} required>
                                 </div>        
                             </div>
-                            <div class="col-lg-6 mb-1">
+                            <div class="col-lg-6 col-6 mb-1">
                                 <div class="form-group">
                                     <label class="mont-font fw-600 font-xssss mb-2 white-text">Pincode</label>
                                     <input type="text" class="form-control theme-black-bg rounded-10" bind:value={customer.pincode} required>
                                 </div>        
                             </div>
-                            <div class="col-lg-6 mb-1">
+                            <div class="col-lg-6 col-6 mb-1">
                                 <div class="form-group">
                                     <label class="mont-font fw-600 font-xssss mb-2 white-text">Choose Delivery Date</label>
                                     <input type="datetime-local" class="form-control theme-black-bg rounded-10" bind:value={customer.created} required>
                                 </div>        
                             </div>
-                            <div class="col-lg-6 mb-1">
+                            <div class="col-lg-6 col-6 mb-1">
                                 <div class="form-group">
                                     <label class="mont-font fw-600 font-xssss mb-2 white-text">Activate weekly order</label>
                                     <select class="form-control theme-black-bg rounded-10" bind:value={customer.weekly_day}>
@@ -108,7 +111,7 @@
                                     </select>
                                 </div>        
                             </div>
-                            <div class="col-lg-12 mb-3">
+                            <div class="col-lg-12 col-12 mb-3">
                                 <div class="form-group">
                                     <label class="mont-font fw-600 font-xssss mb-2 white-text">Delivery Boy Code</label>
                                     <select class="form-control theme-black-bg rounded-10" bind:value={customer.dbc} required>
@@ -126,7 +129,7 @@
                                     </select>
                                 </div>        
                             </div>
-                            <div class="col-lg-12">
+                            <div class="col-lg-12 col-12">
                                 {orderMessage}
                                 <button type="submit" class="btn w-100 bg-current font-xsss ls-1 fw-600 text-white rounded-10 d-block text-center" disabled={orderCompleted}>Confirm Cash On Delivery</button>
                             </div>

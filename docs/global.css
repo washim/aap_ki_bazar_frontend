@@ -6,3 +6,4 @@
 .custom-arrow-prev{margin-left: 5px;}
 .rounded-circle{border: 1px solid black;}
 .video-responsive iframe{height:100%;width:100%; margin:0px; padding:0px; overflow:hidden; position:absolute;}
+.form-control{line-height: normal;}
