@@ -36,7 +36,7 @@
                         const create_order = await fetch('https://ecommerce.nbsols.com/api/orders/', {
                             method: 'POST',
                             headers: {'Authorization': 'Basic YXBwX2tpX2JhemFyOkJhemFyQDc4NiM=', 'Content-Type': 'application/json'},
-                            body: JSON.stringify({"quantity": product.quantity, "weight": product.weight, "invoice": invoice.id, "product": product.id})
+                            body: JSON.stringify({"quantity": product.quantity, "purchase_price": product.purchase_price, "sell_price": product.price, "weight": product.weight, "invoice": invoice.id, "product": product.id})
                         });
                     }
                 }
