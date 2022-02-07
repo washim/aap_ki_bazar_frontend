@@ -11,7 +11,7 @@
         'dbc': '',
         'created': '',
     };
-    let orderCompleted = false;
+    let disabled = false;
     let orderMessage = '';
     
     async function doSubmitOrder() {
@@ -42,13 +42,19 @@
                 }
                 $cart = [];
                 orderMessage = 'Your order successfully placed.';
-                orderCompleted = true;
-                setTimeout(() => {orderCompleted = false; orderMessage = '';}, 5000);
+                disabled = false;
+                setTimeout(() => {orderMessage = '';}, 5000);
             }
         } else {
             orderMessage = 'Cart become empty. Choose products again for new order.';
+            setTimeout(() => {orderMessage = '';}, 5000);
         }
     }
+
+    function handleClick() {
+        disabled = true;
+        doSubmitOrder();
+	}
 </script>
 
 <div class="modal fade" id="checkoutproduct">
@@ -58,7 +64,7 @@
             <div class="modal-body vw100 text-start p-0 h-100">
                 <div class="card p-4 border-0 text-start h-100 ">
                     <h4 class="fw-700 font-lg text-grey-900 text-start mb-3 mt-n2 d-block">Shipping Address</h4>
-                    <form on:submit|preventDefault={doSubmitOrder}>
+                    <form on:submit|preventDefault={handleClick}>
                         <div class="row">
                             <div class="col-lg-12 col-12 mb-1">
                                 <div class="form-group">
@@ -131,7 +137,7 @@
                             </div>
                             <div class="col-lg-12 col-12">
                                 {orderMessage}
-                                <button type="submit" class="btn w-100 bg-current font-xsss ls-1 fw-600 text-white rounded-10 d-block text-center" disabled={orderCompleted}>Confirm Cash On Delivery</button>
+                                <button type="submit" class="btn w-100 bg-current font-xsss ls-1 fw-600 text-white rounded-10 d-block text-center" {disabled}>Confirm Cash On Delivery</button>
                             </div>
                         </div>
                     </form>
